@@ -1,0 +1,97 @@
+.contact {
+  background: var(--surface);
+}
+
+.contact__inner {
+  max-width: 672px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact__title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+/* ── Form ── */
+.contact__form {
+  text-align: left;
+}
+
+.contact__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__label {
+  font-family: monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 8px;
+  margin-left: 4px;
+}
+
+.contact__input,
+.contact__textarea {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  border-color: var(--brand);
+}
+
+.contact__textarea {
+  resize: vertical;
+  margin-bottom: 24px;
+}
+
+.contact__submit {
+  width: 100%;
+  padding: 16px;
+  background: var(--brand);
+  color: #000;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact__submit:hover {
+  background: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .contact__row {
+    grid-template-columns: 1fr;
+  }
+}

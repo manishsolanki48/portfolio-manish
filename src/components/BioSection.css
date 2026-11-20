@@ -1,0 +1,152 @@
+.bio {
+  background: var(--surface);
+}
+
+.bio__card {
+  max-width: 896px;
+  margin: 0 auto;
+  background: rgba(17, 17, 20, 0.5);
+  overflow: hidden;
+}
+
+/* ── Top bar ── */
+.bio__topbar {
+  background: rgba(13, 242, 242, 0.08);
+  border-bottom: 1px solid rgba(13, 242, 242, 0.15);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bio__topbar-label {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--brand);
+  text-transform: uppercase;
+}
+
+.bio__dots {
+  display: flex;
+  gap: 4px;
+}
+
+.bio__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+}
+
+.bio__dot--red {
+  background: rgba(239, 68, 68, 0.5);
+}
+
+.bio__dot--yellow {
+  background: rgba(234, 179, 8, 0.5);
+}
+
+.bio__dot--green {
+  background: rgba(34, 197, 94, 0.5);
+}
+
+/* ── Body ── */
+.bio__body {
+  padding: 48px;
+}
+
+.bio__grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+}
+
+/* Left */
+.bio__photo-wrap {
+  border: 1px solid rgba(13, 242, 242, 0.3);
+  background: #000;
+  padding: 8px;
+  margin-bottom: 24px;
+  aspect-ratio: 1;
+}
+
+.bio__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bio__meta {
+  font-family: monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.bio__meta-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bio__meta-key {
+  opacity: 0.4;
+}
+
+/* Right */
+.bio__title {
+  font-size: 28px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.bio__text {
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.bio__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.bio__stat {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.01);
+  transition: background 0.2s;
+}
+
+.bio__stat:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.bio__stat-num {
+  color: var(--brand);
+  font-family: monospace;
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.bio__stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-family: monospace;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .bio__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bio__body {
+    padding: 24px;
+  }
+}
